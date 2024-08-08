@@ -1,4 +1,3 @@
-import React from 'react'
 import GroupCard from './GroupCard'
 
 const postData = [

@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import FriendCard from './FriendCard'
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Typography } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'

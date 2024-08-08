@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { acceptFriendRequest, rejectFriendRequest, unFriend } from '~/slices/friend/friendSlice'
 import { axiosInstance } from '~/utilities/services/initRequest'
 
-export const fetchListFriend = createAsyncThunk('friend/fetchListFriend', async (thunkAPI) => {
+export const fetchListFriend = createAsyncThunk('friend/fetchListFriend', async () => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {
@@ -17,7 +17,7 @@ export const fetchListFriend = createAsyncThunk('friend/fetchListFriend', async 
   } catch (error) {}
 })
 
-export const fetchListRequest = createAsyncThunk('friend/fetchListRequest', async (thunkAPI) => {
+export const fetchListRequest = createAsyncThunk('friend/fetchListRequest', async () => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {
@@ -30,7 +30,7 @@ export const fetchListRequest = createAsyncThunk('friend/fetchListRequest', asyn
   } catch (error) {}
 })
 
-export const fetchInfoFriend = createAsyncThunk('post/fetchInfoFriend', async (friendId: string, thunkAPI) => {
+export const fetchInfoFriend = createAsyncThunk('post/fetchInfoFriend', async (friendId: string) => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {
@@ -94,17 +94,14 @@ export const deleteFriend = createAsyncThunk('friend/deleteFriend', async (frien
   } catch (error) {}
 })
 
-export const deleteRequestFriend = createAsyncThunk(
-  'friend/deleteRequestFriend',
-  async (receiverId: string, thunkAPI) => {
-    try {
-      const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
-      const auth = {
-        headers: {
-          Authorization: `Bearer ${accessToken}`
-        }
+export const deleteRequestFriend = createAsyncThunk('friend/deleteRequestFriend', async (receiverId: string) => {
+  try {
+    const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
+    const auth = {
+      headers: {
+        Authorization: `Bearer ${accessToken}`
       }
-      await axiosInstance.delete(`/friend/delete-request/user?receiverId=${receiverId}`, auth)
-    } catch (error) {}
-  }
-)
+    }
+    await axiosInstance.delete(`/friend/delete-request/user?receiverId=${receiverId}`, auth)
+  } catch (error) {}
+})

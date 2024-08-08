@@ -1,9 +1,6 @@
 import { useColorScheme } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { IFriend } from '~/types/friend'
-interface AlbumProps {
-  data: IFriend[]
-}
+
 const Album = () => {
   const { t } = useTranslation()
   const { mode } = useColorScheme()

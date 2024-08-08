@@ -9,7 +9,6 @@ import { editAvatar } from '~/apis/user/userThunk'
 import { AppDispatch } from '~/app/appHooks'
 import { IFriend } from '~/types/friend'
 import { useNavigate } from 'react-router-dom'
-import { light } from '@mui/material/styles/createPalette'
 import { useColorScheme } from '@mui/material'
 
 interface IntroProps {
@@ -24,8 +23,9 @@ const Info: React.FC<IntroProps> = ({ data, dataFriend }) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null)
   const [isOpen, setIsOpen] = useState(false)
   const [isOpenUnFriend, setIsOpenUnFriend] = useState(false)
+
   const handleUnfriend = () => {
-    setIsOpenUnFriend(true)
+    setIsOpenUnFriend(!isOpenUnFriend)
   }
   const handleNavigate = () => {
     navigate('/friend/list')

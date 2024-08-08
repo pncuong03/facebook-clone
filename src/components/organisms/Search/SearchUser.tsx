@@ -5,11 +5,8 @@ import { fetchSearchUser } from '~/apis/user/userThunk'
 import Input from '~/components/atoms/Input'
 import { ISearchUser } from '~/types/user'
 import { useNavigate } from 'react-router-dom'
-import { acceptRequest, deleteRequestFriend, sendRequest } from '~/apis/friend/friendThunk'
-import Button from '~/components/atoms/Button'
 import { AppDispatch, RootState } from '~/app/appHooks'
 import { useDispatch, useSelector } from 'react-redux'
-import { toast } from 'react-toastify'
 
 const SearchComponent: React.FC = () => {
   const { t } = useTranslation()
@@ -43,20 +40,20 @@ const SearchComponent: React.FC = () => {
     }
   }, [search, data, dispatch])
 
-  const handleSendRequest = (id: string) => {
-    dispatch(sendRequest(id))
-    toast.success(t('home.sendrequest'))
-  }
+  // const handleSendRequest = (id: string) => {
+  //   dispatch(sendRequest(id))
+  //   toast.success(t('home.sendrequest'))
+  // }
 
-  const handleAccept = (id: string) => {
-    dispatch(acceptRequest(id))
-    toast.success(t('home.acceptrequest'))
-  }
+  // const handleAccept = (id: string) => {
+  //   dispatch(acceptRequest(id))
+  //   toast.success(t('home.acceptrequest'))
+  // }
 
-  const handleDeleteRequest = async (id: string) => {
-    dispatch(deleteRequestFriend(id))
-    toast.success(t('home.deleterequest'))
-  }
+  // const handleDeleteRequest = async (id: string) => {
+  //   dispatch(deleteRequestFriend(id))
+  //   toast.success(t('home.deleterequest'))
+  // }
 
   const handleNavigate = (user: ISearchUser) => {
     setSearch('')

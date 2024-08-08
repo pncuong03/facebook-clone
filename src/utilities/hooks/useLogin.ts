@@ -1,11 +1,10 @@
 import { useCallback } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { userLogin } from '~/apis/auth/authThunk'
-import { AppDispatch, RootState } from '~/app/appHooks'
-import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, FacebookAuthProvider } from 'firebase/auth'
+import { AppDispatch } from '~/app/appHooks'
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { auth } from '~/apis/firebase'
-import { register } from 'module'
 import { useRegister } from './useRegister'
 
 export const useLogin = () => {

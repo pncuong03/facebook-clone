@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react'
-import { List, ListItem, ListItemAvatar, Avatar, ListItemText, Typography } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
-import { ISearchUser } from '~/types/user'
+import { useEffect } from 'react'
+import { Typography } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '~/app/appHooks'
 import { fetchListFriend } from '~/apis/friend/friendThunk'
@@ -9,7 +7,6 @@ import FriendCard from '~/components/organisms/Friend/FriendCard'
 import { useTranslation } from 'react-i18next'
 
 const FriendList = () => {
-  const navigate = useNavigate()
   const { t } = useTranslation()
 
   const dispatch = useDispatch<AppDispatch>()

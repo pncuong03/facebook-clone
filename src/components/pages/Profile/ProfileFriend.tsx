@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import EditBackground from '../../organisms/Profile/Header/EditBackground'
 import Intro from '../../organisms/Profile/Footer/Intro'
 import Album from '../../organisms/Profile/Footer/Album'

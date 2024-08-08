@@ -1,9 +1,9 @@
 import TimeComparison from '~/const/dateFormat'
 import PostCard from './PostCard'
 import { IPost } from '~/types/post'
-import { useDispatch, useSelector } from 'react-redux'
-import { AppDispatch, RootState } from '~/app/appHooks'
-import { Collapse, useColorScheme } from '@mui/material'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '~/app/appHooks'
+import { useColorScheme } from '@mui/material'
 import PostNoCard from './PostNoCard'
 import Button from '~/components/atoms/Button'
 import clsx from 'clsx'
@@ -17,8 +17,6 @@ import { deletePost, likePost, unLikePost } from '~/apis/post/postThunk'
 import { toast } from 'react-toastify'
 import GetLikeModal from './GetLikeModal'
 import GetShareModal from './GetShareModal'
-import GetComment from './CommentModal'
-import { Elipsis } from '~/components/atoms/Icons/Elipsis'
 import { DeleteIcon } from '~/components/atoms/Icons/DeleteIcon'
 
 interface IProps {
@@ -117,7 +115,7 @@ const ShareCard: React.FC<IProps> = ({ post }) => {
                     <LikeIcon liked={item.hasLike} />
                     {t('home.like')}
                   </Button>
-                  <Button className='rounded-md' onClick={() => setIsOpenComment((prev) => !prev)}>
+                  <Button className='rounded-md' onClick={() => setIsOpenComment(!isOpenComment)}>
                     <CommentIcon />
                     {t('home.comment')}
                   </Button>

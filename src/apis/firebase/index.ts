@@ -1,7 +1,5 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
-import { getAnalytics } from 'firebase/analytics'
 import {
   API_APP_ID,
   API_AUTH_DOMAIN,

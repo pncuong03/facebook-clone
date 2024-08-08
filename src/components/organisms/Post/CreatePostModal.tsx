@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Modal from '~/components/atoms/Modal'
 import Button from '~/components/atoms/Button'
-import { Box, CircularProgress } from '@mui/material'
 import { AppDispatch, RootState } from '~/app/appHooks'
 import { useDispatch, useSelector } from 'react-redux'
 import { createPost } from '~/apis/post/postThunk'
@@ -51,7 +50,7 @@ const CreatePostModal: React.FC<Props> = ({ isOpen, closeModal, bgColor }) => {
     const createPostInputString = JSON.stringify({ content, state })
     formData.append('createPostInputString', createPostInputString)
 
-    images.forEach((image, index) => {
+    images.forEach((image) => {
       formData.append('images', image)
     })
 

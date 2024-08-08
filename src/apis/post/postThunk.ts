@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import { axiosInstance } from '~/utilities/services/initRequest'
 import { decreaseLike, deletePostofMe, increaseComment, increaseLike, increaseShare } from '~/slices/post/postSlice'
 
-export const fetchPostPublicOfFriend = createAsyncThunk('post/fetchPostPulic', async (thunkAPI) => {
+export const fetchPostPublicOfFriend = createAsyncThunk('post/fetchPostPulic', async () => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {
@@ -16,7 +16,7 @@ export const fetchPostPublicOfFriend = createAsyncThunk('post/fetchPostPulic', a
   } catch (error) {}
 })
 
-export const fetchPostFriend = createAsyncThunk('post/fetchPostFriend', async (friendId: string, thunkAPI) => {
+export const fetchPostFriend = createAsyncThunk('post/fetchPostFriend', async (friendId: string) => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {
@@ -30,7 +30,7 @@ export const fetchPostFriend = createAsyncThunk('post/fetchPostFriend', async (f
   } catch (error) {}
 })
 
-export const fetchPostOfMe = createAsyncThunk('post/fetchPostOfMe', async (thunkAPI) => {
+export const fetchPostOfMe = createAsyncThunk('post/fetchPostOfMe', async () => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {
@@ -56,7 +56,7 @@ export const createPost = createAsyncThunk('post/createPost', async (postData: F
   } catch (error) {}
 })
 
-export const fetchLikePost = createAsyncThunk('post/fetchLikePost', async (postId: string, thunkAPI) => {
+export const fetchLikePost = createAsyncThunk('post/fetchLikePost', async (postId: string) => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {
@@ -69,7 +69,7 @@ export const fetchLikePost = createAsyncThunk('post/fetchLikePost', async (postI
   } catch (error) {}
 })
 
-export const fetchDetailPost = createAsyncThunk('post/fetchDetailPost', async (postId: string, thunkAPI) => {
+export const fetchDetailPost = createAsyncThunk('post/fetchDetailPost', async (postId: string) => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
-import { acceptRequest, deleteFriend, rejectRequest } from '~/apis/friend/friendThunk'
+import { Link } from 'react-router-dom'
+import { deleteFriend } from '~/apis/friend/friendThunk'
 import { AppDispatch } from '~/app/appHooks'
 import Button from '~/components/atoms/Button'
 import { IFriend } from '~/types/friend'
@@ -12,7 +12,6 @@ interface IProps {
 const FriendCard: React.FC<IProps> = ({ data }) => {
   const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
-  const navigate = useNavigate()
   const handleDelete = () => {
     dispatch(deleteFriend(data?.id))
   }

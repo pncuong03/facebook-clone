@@ -1,8 +1,4 @@
-import { useColorScheme } from '@mui/material'
-
 export function DeleteIcon(props: React.SVGAttributes<unknown>) {
-  const { mode } = useColorScheme()
-
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -12,6 +8,7 @@ export function DeleteIcon(props: React.SVGAttributes<unknown>) {
       width='2em'
       height='1em'
       viewBox='0 0 482.428 482.429'
+      {...props}
     >
       <g>
         <g>

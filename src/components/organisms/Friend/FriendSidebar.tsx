@@ -1,8 +1,6 @@
 import { useColorScheme } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { RootState } from '~/app/appHooks'
 import { GroupIcon } from '~/components/atoms/Icons/GroupIcon'
 import { UsersIcon } from '~/components/atoms/Icons/UsersIcon'
 import routesName from '~/routes/enum.routes'

@@ -68,7 +68,7 @@ const SidebarMessage = () => {
                 <div className='flex gap-3 text-neutral-200 text-lg font-thin'>
                   <p>{chat.newestMessage}</p>
                   <p>
-                    <TimeComparison time={chat.newestChatTime} />
+                    <TimeComparison t={t} time={chat.newestChatTime} />
                   </p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ const SidebarMessage = () => {
                 <div key={message.id} className='flex items-center gap-3 p-4 justify-end'>
                   <p className='text-xl bg-blue-300 rounded-full w-auto p-2'>{message.message}</p>
                   <p>
-                    <TimeComparison time={message.createdAt} />
+                    <TimeComparison t={t} time={message.createdAt} />
                   </p>
                 </div>
               ) : (
@@ -93,7 +93,7 @@ const SidebarMessage = () => {
                   <img src={message.imageUrl} className='h-12 w-12 rounded-full' alt='dp' />
                   <p className='text-xl bg-gray-300 rounded-full w-auto p-2'>{message.message}</p>
                   <p>
-                    <TimeComparison time={message.createdAt} />
+                    <TimeComparison t={t} time={message.createdAt} />
                   </p>
                 </div>
               )

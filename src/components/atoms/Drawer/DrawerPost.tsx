@@ -1,8 +1,5 @@
 import React, { useState, ReactNode, MouseEvent } from 'react'
 import { IconButton, Menu, MenuItem } from '@mui/material'
-import i18next from 'i18next'
-import { EnIcon } from '../Icons/EnIcon'
-import { VIIcon } from '../Icons/VIIcon'
 import { ThreedotIcon } from '../Icons/ThreedotIcon'
 
 interface CustomDrawerProps {
@@ -12,7 +9,6 @@ interface CustomDrawerProps {
 
 const DrawerPost: React.FC<CustomDrawerProps> = ({ menuItems, children }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
-  const currentLanguage = i18next.language
 
   const handleMenuOpen = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget)

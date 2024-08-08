@@ -4,10 +4,9 @@ import Modal from '~/components/atoms/Modal'
 import Button from '~/components/atoms/Button'
 import { AppDispatch, RootState } from '~/app/appHooks'
 import { useDispatch, useSelector } from 'react-redux'
-import { editUser, fetchInfoUser } from '~/apis/user/userThunk'
+import { editUser } from '~/apis/user/userThunk'
 import Input from '~/components/atoms/Input'
 import { toast } from 'react-toastify'
-import { IUser } from '~/types/user'
 
 type Props = {
   isOpen: boolean

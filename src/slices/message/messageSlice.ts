@@ -1,6 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { stat } from 'fs'
-import { fetchListChat, fetchListMessage, sendMessage } from '~/apis/message/messageThunk'
+import { fetchListChat, fetchListMessage } from '~/apis/message/messageThunk'
 import { IChat } from '~/types/message'
 import { IMessage } from '~/types/noti'
 import { FetchStatus } from '~/types/user'

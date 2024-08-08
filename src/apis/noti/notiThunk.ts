@@ -1,5 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { addMessageReceived } from '~/slices/message/messageSlice'
 import { IEventNoti, INoti } from '~/types/noti'
 import { axiosInstance } from '~/utilities/services/initRequest'
 
@@ -24,7 +23,7 @@ export const fetchListNoti = createAsyncThunk<INoti[], FetchListNotiParams>(
   }
 )
 
-export const fetchEventNoti = createAsyncThunk<IEventNoti>('noti/fetchEventNoti', async (thunkAPI) => {
+export const fetchEventNoti = createAsyncThunk<IEventNoti>('noti/fetchEventNoti', async () => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {
@@ -37,7 +36,7 @@ export const fetchEventNoti = createAsyncThunk<IEventNoti>('noti/fetchEventNoti'
   } catch (error) {}
 })
 
-export const deleteEventNoti = createAsyncThunk('noti/deleteEventNoti', async (thunkAPI) => {
+export const deleteEventNoti = createAsyncThunk('noti/deleteEventNoti', async () => {
   try {
     const accessToken = localStorage.getItem('ACCESS_TOKEN') || ''
     const auth = {

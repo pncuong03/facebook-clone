@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useColorScheme } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { acceptRequest, deleteRequestFriend, sendRequest } from '~/apis/friend/friendThunk'
@@ -8,7 +8,6 @@ import { AppDispatch } from '~/app/appHooks'
 import { useLocation } from 'react-router-dom'
 import Album from '../Profile/Footer/Album'
 import Button from '~/components/atoms/Button'
-import { fetchPostFriend } from '~/apis/post/postThunk'
 import PostCard from '../Post/PostCard'
 
 const posts = [

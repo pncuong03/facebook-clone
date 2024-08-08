@@ -6,17 +6,14 @@ import { CommentIcon } from '../../atoms/Icons/CommentIcon'
 import Button from '~/components/atoms/Button'
 import { useTranslation } from 'react-i18next'
 import { ShareIcon } from '~/components/atoms/Icons/ShareIcon'
-import { useColorScheme } from '@mui/material'
 import GetLikeModal from './GetLikeModal'
 import TimeComparison from '~/const/dateFormat'
 import { toast } from 'react-toastify'
-import { AppDispatch, RootState } from '~/app/appHooks'
-import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch } from '~/app/appHooks'
+import { useDispatch } from 'react-redux'
 import { likePost, unLikePost } from '~/apis/post/postThunk'
-import { access } from 'fs/promises'
 import clsx from 'clsx'
 import GetShareModal from './GetShareModal'
-import GetDetailModal from './GetDetailModal'
 
 interface IProps {
   post: IPost
@@ -25,7 +22,6 @@ interface IProps {
 const PostCardComment: React.FC<IProps> = ({ post }) => {
   const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
-  const { mode } = useColorScheme()
   const [isOpenLiked, setIsOpenLiked] = useState(false)
   const [isOpenShared, setIsOpenShared] = useState(false)
   const [isOpenCommented, setIsOpenCommented] = useState(false)
@@ -103,7 +99,7 @@ const PostCardComment: React.FC<IProps> = ({ post }) => {
             <LikeIcon liked={post.hasLike} />
             {t('home.like')}
           </Button>
-          <Button className='rounded-md' onClick={() => setIsOpenCommented(true)}>
+          <Button className='rounded-md' onClick={() => setIsOpenCommented(!isOpenCommented)}>
             <CommentIcon />
             {t('home.comment')}
           </Button>

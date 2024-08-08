@@ -1,13 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { IPost } from '~/types/post'
 import { useTranslation } from 'react-i18next'
 import { useColorScheme } from '@mui/material'
 import TimeComparison from '~/const/dateFormat'
-import { toast } from 'react-toastify'
-import { AppDispatch, RootState } from '~/app/appHooks'
-import { useDispatch, useSelector } from 'react-redux'
-import { likePost, unLikePost } from '~/apis/post/postThunk'
-import CarouselImage from '~/components/atoms/Carousel/CarouselImage'
 
 interface IProps {
   post: IPost
@@ -15,7 +10,6 @@ interface IProps {
 
 const PostNoCard: React.FC<IProps> = ({ post }) => {
   const { t } = useTranslation()
-  const dispatch = useDispatch<AppDispatch>()
   const { mode } = useColorScheme()
 
   return (

@@ -1,6 +1,3 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { AppDispatch, RootState } from '~/app/appHooks'
 import { useColorScheme } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import Button from '~/components/atoms/Button'
@@ -37,13 +34,11 @@ const videoData = [
     description: 'Nhũng vũ công Samba',
     videoUrl: 'https://www.youtube.com/embed/_TleFMmKbco'
   }
-  // Add more video data here
 ]
 
 const WatchCard = () => {
   const { mode } = useColorScheme()
   const { t } = useTranslation()
-  const dispatch = useDispatch<AppDispatch>()
 
   return (
     <div className='flex flex-col gap-3 pt-3'>

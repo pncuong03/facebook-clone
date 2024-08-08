@@ -1,6 +1,5 @@
 import { useColorScheme } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import Button from '~/components/atoms/Button'
 import { GenderIcon } from '~/components/atoms/Icons/GenderIcon'
 import { JobIcon } from '~/components/atoms/Icons/JobIcon'
 import { IUser } from '~/types/user'

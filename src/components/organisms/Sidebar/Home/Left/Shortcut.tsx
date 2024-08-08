@@ -1,5 +1,3 @@
-import React from 'react'
-import Contacts from '../Right/Contacts'
 import { useTranslation } from 'react-i18next'
 
 const ShortCut = () => {

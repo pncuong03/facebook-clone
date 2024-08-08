@@ -7,7 +7,6 @@ import { fetchListFriend } from '~/apis/friend/friendThunk'
 import { AppDispatch, RootState } from '~/app/appHooks'
 import Button from '~/components/atoms/Button'
 import { Elipsis } from '~/components/atoms/Icons/Elipsis'
-import { SearchIcon } from '~/components/atoms/Icons/SearchIcon'
 
 const Contacts = () => {
   const { mode } = useColorScheme()

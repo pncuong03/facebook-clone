@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import LeftSidebar from '~/components/organisms/Sidebar/Home/Left'
 import RightSidebar from '~/components/organisms/Sidebar/Home/Right'
 import CreatePostBox from '~/components/organisms/Post/CreatePost'

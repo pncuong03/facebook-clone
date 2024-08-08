@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Album from '../../organisms/Profile/Footer/Album'
 import FriendProfile from '~/components/organisms/Profile/Footer/Friend'
 import { useColorScheme } from '@mui/material'

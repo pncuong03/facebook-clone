@@ -1,13 +1,12 @@
 import clsx from 'clsx'
 import React, { useEffect, useRef, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import routesName from '~/routes/enum.routes'
 import { HomeIcon } from '~/components/atoms/Icons/HomeIcon'
 import { WatchIcon } from '~/components/atoms/Icons/WatchIcon'
 import { GroupIcon } from '~/components/atoms/Icons/GroupIcon'
 import { BellIcon } from '~/components/atoms/Icons/BellIcon'
 import Button from '~/components/atoms/Button'
-import { useTranslation } from 'react-i18next'
 import { useColorScheme } from '@mui/material/styles'
 import MaterialUISwitch from '~/components/atoms/SwitchDarkMode/SwitchDarkMode'
 import { AppDispatch, RootState } from '~/app/appHooks'
@@ -17,9 +16,8 @@ import DrawerLanguage from '~/components/atoms/Drawer/DrawerLanguage'
 import SearchUser from '~/components/organisms/Search/SearchUser'
 import Notification from '~/components/organisms/Notification/GetNoti'
 import { Badge } from '@mui/material'
-import { deleteMessageNoti } from '~/slices/noti/notiSlice'
-import GetModalProfile from '~/components/organisms/Sidebar/Home/ProfileModal'
 import { fetchEventNoti } from '~/apis/noti/notiThunk'
+import GetModalProfile from '~/components/organisms/Sidebar/Home/ProfileModal'
 
 const MENU_ITEMS = [
   { name: 'Home', path: routesName.HOME, icon: HomeIcon },
@@ -36,8 +34,6 @@ const Header: React.FC = () => {
   const { pathname } = useLocation()
   const dispatch = useDispatch<AppDispatch>()
   const { mode, setMode } = useColorScheme()
-  const navigate = useNavigate()
-  const { t } = useTranslation()
   const data = useSelector((state: RootState) => state.user.user)
   const noti = useSelector((state: RootState) => state.noti.notiEvent)
   const [isOpenNotification, setIsOpenNotification] = useState(false)
@@ -80,9 +76,6 @@ const Header: React.FC = () => {
     }
   }, [dispatch])
 
-  const handleDeleteEvent = () => {
-    dispatch(deleteMessageNoti())
-  }
   return (
     <header
       className={`fixed z-10 flex h-[75px] w-full px-2 gap-2 mx-auto items-center justify-between ${mode === 'light' ? 'bg-white' : 'bg-black-300'} shadow-md`}

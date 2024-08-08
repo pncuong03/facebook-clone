@@ -9,7 +9,6 @@ import { ShareIcon } from '~/components/atoms/Icons/ShareIcon'
 import { useColorScheme } from '@mui/material'
 import GetLikeModal from './GetLikeModal'
 import TimeComparison from '~/const/dateFormat'
-import { toast } from 'react-toastify'
 import { AppDispatch } from '~/app/appHooks'
 import { useDispatch } from 'react-redux'
 import { deletePost, fetchDetailPost, likePost, unLikePost } from '~/apis/post/postThunk'
@@ -19,7 +18,6 @@ import { Link } from 'react-router-dom'
 import Collapse from '@mui/material/Collapse'
 import GetComment from './CommentModal'
 import { DeleteIcon } from '~/components/atoms/Icons/DeleteIcon'
-import CarouselImage from '~/components/atoms/Carousel/CarouselImage'
 
 interface IProps {
   post: IPost
