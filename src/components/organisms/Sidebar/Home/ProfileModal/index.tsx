@@ -11,6 +11,7 @@ import { GroupIcon } from '~/components/atoms/Icons/GroupIcon'
 import { GamingIcon } from '~/components/atoms/Icons/GamingIcon'
 import { LogoutIcon } from '~/components/atoms/Icons/LogoutIcon'
 import routesName from '~/routes/enum.routes'
+import { WatchIcon } from '~/components/atoms/Icons/WatchIcon'
 
 interface ModalProfileProps {
   isOpen: boolean
@@ -28,6 +29,8 @@ const GetModalProfile: React.FC<ModalProfileProps> = ({ isOpen, onClose }) => {
   const MENU_ITEMS = [
     { name: 'Friends', path: routesName.FRIEND, icon: UsersIcon, title: t('home.friend') },
     { name: 'Groups', path: routesName.GROUP, icon: GroupIcon, title: t('home.group') },
+    { name: 'Watch', path: routesName.WATCH, icon: WatchIcon, title: t('home.watch') },
+
     { name: 'Gaming', path: routesName.GAMING, icon: GamingIcon, title: t('home.gaming') }
   ]
 

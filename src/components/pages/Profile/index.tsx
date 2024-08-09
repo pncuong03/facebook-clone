@@ -41,13 +41,13 @@ const ProfilePage: React.FC = () => {
         </div>
       </div>
 
-      <div className='mx-auto w-full lg:grid grid-cols-3 gap-4 h-full mt-6 px-2 md:px-6 2xl:px-96'>
+      <div className='mx-auto w-full lg:grid grid-cols-3 gap-4 h-full mt-6 px-2 md:px-6 2xl:px-96 '>
         <div className='grid gap-4 mb-4 col-span-1 h-fit '>
           <Intro data={userInfo} />
           <Album />
           <FriendProfile data={listFriend} />
         </div>
-        <div className='grid gap-2 col-span-2 w-[45rem]'>
+        <div className='grid gap-2 col-span-2'>
           <CreatePostBox bgColor='' isOpen={true} closeModal={() => {}} />
           <ShareCard post={data} />
         </div>

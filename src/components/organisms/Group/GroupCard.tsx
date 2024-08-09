@@ -18,8 +18,8 @@ const GroupCard: React.FC<IGroup> = ({ data }) => {
   // const dispatch = useDispatch<AppDispatch>()
 
   return (
-    <div className='flex flex-col gap-3 '>
-      <p className='font-semibold text-2xl mb-3'>{t('home.activity')}</p>
+    <div className='flex flex-col '>
+      <p className='font-semibold text-2xl p-3'>{t('home.activity')}</p>
       <div className='p-2 rounded-lg'>
         {data.map((post: any) => (
           <div

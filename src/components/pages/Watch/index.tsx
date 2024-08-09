@@ -4,7 +4,7 @@ import WatchSidebar from '~/components/organisms/Watch/WatchSidebar'
 
 const WatchPage: React.FC = () => {
   return (
-    <div className='flex gap-6'>
+    <div className=''>
       <WatchSidebar />
       <main className=''>
         <Outlet />

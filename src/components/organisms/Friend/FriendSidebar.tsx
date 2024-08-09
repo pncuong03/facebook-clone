@@ -16,7 +16,7 @@ const FriendSidebar = () => {
 
   return (
     <div
-      className={`fixed z-0 w-full md:w-[24rem] h-60 md:h-screen shadow-md pl-6 pt-14 ${mode === 'light' ? 'bg-white' : 'bg-black-300'}`}
+      className={`fixed z-0 w-full lg:w-96 h-60 lg:h-screen shadow-md pl-6 pt-14 ${mode === 'light' ? 'bg-white' : 'bg-black-300'}`}
     >
       <div className='font-semibold text-2xl pb-4'>{t('home.friend')}</div>
       {MENU_ITEMS.map((item, index) => (

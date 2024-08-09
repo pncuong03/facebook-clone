@@ -48,7 +48,7 @@ const ShareCard: React.FC<IProps> = ({ post }) => {
   }
 
   return (
-    <div className='flex flex-col gap-3 pt-3 max-w-[370px] md:max-w-[720px]'>
+    <div className='flex flex-col gap-3 pt-3'>
       {[...post]?.reverse().map((item) => (
         <div key={item.id}>
           {item.sharePost ? (

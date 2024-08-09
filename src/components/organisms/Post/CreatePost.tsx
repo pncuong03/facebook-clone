@@ -21,9 +21,7 @@ const CreatePostBox: React.FC<Props> = () => {
   const data = useSelector((state: RootState) => state.user.user)
 
   return (
-    <div
-      className={`flex flex-col rounded-lg h-max p-4 shadow-md max-w-[370px] md:max-w-[720px]  ${mode === 'light' ? 'bg-white' : 'bg-black-300'} `}
-    >
+    <div className={`flex flex-col rounded-lg h-max p-4 shadow-md  ${mode === 'light' ? 'bg-white' : 'bg-black-300'} `}>
       <div
         className={`mb-2 flex items-center space-x-2 border-b pb-3 ${mode === 'light' ? 'border-gray-200' : 'border-gray-600'}`}
       >

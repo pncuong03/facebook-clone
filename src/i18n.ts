@@ -1,7 +1,7 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import commonEN from '../src/locales/en/commonEN.json'
-import commonVI from '../src/locales/vi/commonVI.json'
+import commonEN from './locales/en/commonEN.json'
+import commonVI from './locales/vi/commonVI.json'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
 const resources = {

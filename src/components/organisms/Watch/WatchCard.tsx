@@ -41,14 +41,14 @@ const WatchCard = () => {
   const { t } = useTranslation()
 
   return (
-    <div className='flex flex-col gap-3 pt-3'>
-      <div className={`p-4 rounded-lg ${mode === 'light' ? 'bg-white' : 'bg-black-300'}`}>
+    <div className='flex flex-col gap-3 mx-2 max-w-[370px] md:max-w-[750px] '>
+      <div className={`rounded-lg mt-3 p-3  ${mode === 'light' ? 'bg-white' : 'bg-black-300'}`}>
         <p className='font-semibold text-2xl mb-3'>Video mới dành cho bạn</p>
-        <div className='flex'>
+        <div className='flex flex-col md:flex-row gap-2'>
           {videoData.slice(0, 2).map((video) => (
             <div key={video.id} className='flex gap-3'>
               <img className='h-14 w-14 rounded-full' src='https://random.imagecdn.app/600/200' />
-              <div className='w-96'>
+              <div className='w-96 md:w-72'>
                 <p className='text-xl font-normal'>{video.description}</p>
                 <p className='text-sm font-semibold text-blue-600'>{video.time}</p>
               </div>
@@ -57,7 +57,10 @@ const WatchCard = () => {
         </div>
       </div>
       {videoData.map((video) => (
-        <div key={video.id} className={`rounded-lg ${mode === 'light' ? 'bg-white' : 'bg-black-300'}`}>
+        <div
+          key={video.id}
+          className={`rounded-lg max-w-sm md:max-w-[750px] ${mode === 'light' ? 'bg-white' : 'bg-black-300'}`}
+        >
           <div className='flex items-center space-x-2 p-4'>
             <div className='h-14 w-14'>
               <img src='https://random.imagecdn.app/600/200' className='h-full w-full rounded-full' alt='dp' />

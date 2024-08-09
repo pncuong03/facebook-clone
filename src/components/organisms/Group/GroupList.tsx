@@ -53,8 +53,8 @@ const postData = [
 
 const GroupList = () => {
   return (
-    <div className='h-full w-full pt-16 pl-[700px] pr-[300px]'>
-      <div className='w-full max-w-4xl px-6'>
+    <div className='h-full w-full pt-44 lg:pt-16 lg:pl-[390px] 2xl:pl-[690px]'>
+      <div className='w-full max-w-4xl'>
         <GroupCard data={postData} />
       </div>
     </div>

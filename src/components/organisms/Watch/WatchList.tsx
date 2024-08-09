@@ -2,7 +2,7 @@ import WatchCard from './WatchCard'
 
 const WatchList = () => {
   return (
-    <div className='h-full w-full pt-16 pl-[700px] pr-[300px]'>
+    <div className='h-full w-full pt-44 lg:pt-16 lg:pl-[390px] 2xl:pl-[690px]'>
       <WatchCard />
     </div>
   )
